@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Lesson4 {
     public static void main(String[] args) {
         printThreeWords ();
@@ -12,7 +14,9 @@ public class Lesson4 {
         change ();
         array ();
         multiplyByTwo ();
-     }
+        diagonal ();
+        initialValue ();
+    }
 
           // Task1
     public static void printThreeWords() {
@@ -140,10 +144,32 @@ static boolean leapYear () {
     }
 
         //Task13
-    int [][] table = new int [10][10];
-    for (int i = 0; i < 10; i++ {
-        table [i][i] = 1;
+        public static void diagonal() {
+            int[][] arr = new int[5][5];
+
+            for (int i = 0; i < arr.length; i++) {
+                arr[i][arr.length - i - 1] = 1;
+            }
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = 0; j < arr.length; j++) {
+                    arr[i][i] = 1;
+                    System.out.print(arr[i][j] + " ");
+                }
+                System.out.println();
+            }
+        }
+
+        //Task14
+    public static void initialValue () {
+        int len = 10;
+        int initialValue = 100;
+        int[] arr = new int[len];
+        for (int i = 0; i < len; i++) {
+            arr[i] = initialValue;
+            System.out.println(arr[i]);
+        }
+            }
     }
-    }
+
 
 
