@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 public class Lesson4 {
     public static void main(String[] args) {
         printThreeWords ();
