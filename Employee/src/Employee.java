@@ -1,15 +1,13 @@
-import java.math.BigInteger;
-
 public class Employee {
     private String fullName;
     private String position;
     private String email;
-    private long phoneNumber;
-    private double salary;
+    private String phoneNumber;
+    private int salary;
     private int age;
 
 
-    public Employee (String fullName, String position, String email, long phoneNumber, double salary, int age) {
+    public Employee (String fullName, String position, String email, String phoneNumber, int salary, int age) {
         this.fullName = fullName;
         this.position = position;
         this.email = email;
@@ -27,7 +25,7 @@ public class Employee {
         System.out.println("Age: " + this.age);
     }
     public static void main(String[] args) {
-        Employee employee = new Employee("Иванов Иван Иванович", "Manager", "ivanov@example.com", 89998887766l, 50000.0, 35);
+        Employee employee = new Employee("Иванов Иван Иванович", "Manager", "ivanov@example.com", "89998887766", 50000, 35);
         employee.printEmployeeInfo();
     }
 }
