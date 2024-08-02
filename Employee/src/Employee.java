@@ -6,7 +6,6 @@ public class Employee {
     private int salary;
     private int age;
 
-
     public Employee (String fullName, String position, String email, String phoneNumber, int salary, int age) {
         this.fullName = fullName;
         this.position = position;
@@ -14,18 +13,24 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.salary = salary;
         this.age = age;
+            }
 
+    public String getFullName() {
+        return fullName;
     }
-    public void printEmployeeInfo() {
-        System.out.println("Full Name: " + this.fullName);
-        System.out.println("Position: " + this.position);
-        System.out.println("Email: " + this.email);
-        System.out.println("Phone: " + this.phoneNumber);
-        System.out.println("Salary: " + this.salary);
-        System.out.println("Age: " + this.age);
+    public String getPosition() {
+        return position;
     }
-    public static void main(String[] args) {
-        Employee employee = new Employee("Иванов Иван Иванович", "Manager", "ivanov@example.com", "89998887766", 50000, 35);
-        employee.printEmployeeInfo();
+    public String getEmail() {
+        return email;
     }
-}
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public int getSalary() {
+        return salary;
+    }
+    public int getAge() {
+        return age;
+    }
+       }
