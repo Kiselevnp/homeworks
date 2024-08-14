@@ -1,11 +1,30 @@
 public class Main {
     public static void main(String[] args) {
-        Dog dog = new Dog("Бобик");
-        Cat cat = new Cat("Барсик");
-        dog.run(150);
-        dog.swim(5000);
 
-        cat.run(1000);
-        cat.swim(5);
+        Bowl bowl = new Bowl(50);
+
+        Cat[] cats = { new Cat("Барсик"), new Cat("Мурзик"), new Cat("Васька") };
+
+        for (Cat cat : cats) {
+            cat.eatFromBowl(bowl);
+        }
+
+        // Выводим информацию о сытости котов
+        for (Cat cat : cats) {
+            System.out.println(cat.name + " сыт: " + cat.isFull());
+        }
+
+        bowl.addFood(30);
+
+        // Пытаемся снова накормить котов
+        for (Cat cat : cats) {
+            if (!cat.isFull()) {
+                cat.eatFromBowl(bowl);
+            }
+        }
+
+             for (Cat cat : cats) {
+            System.out.println(cat.name + " сыт: " + cat.isFull());
+        }
     }
 }
